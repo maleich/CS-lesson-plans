@@ -49,4 +49,26 @@ Safer to use parentheses to be sure you get what you what - and make it easier t
 ```
  Play with the Console for a bit. Notice any errors you get - or other unexpected behavior.
  
- 
+ ### Data types
+ Data can have four main data types:
+ * int - integers
+ * float - floating point numbers (decimals)
+ * str - strings (text), surround with quotes
+ * bool - boolean (True, False)
+
+To check the type, use function type()
+```python
+>>> type(3)
+<class 'int'>
+``` 
+
+To convert between types, use type functions:
+* int()
+* float()
+* str()
+* bool()
+(Note that this only works when the conversion makes sense.)
+
+```
+int('Hello')    # This will give an error!
+```
