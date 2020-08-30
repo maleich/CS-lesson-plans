@@ -155,3 +155,5 @@ So does this:
 ```
 x = int(input())    # Be careful - if the user enters a word, an error will occur.
 ```
+
+## Concatenation
