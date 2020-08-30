@@ -1,9 +1,8 @@
 # Check-in 1: Intro to Python
-
 **Instructions: Answer the following questions in this document.  Try to answer them from memory first, but feel free to use your notes if needed.**
 
-
 1. Which of the following are operators and which are values?
+
 | Example | Operator or Value? |
 | :---: | :---: |
 | Cat |   |
@@ -13,6 +12,7 @@
 | == |   |
 
 2. Which of the following are variables and which are strings?
+
 | Example |	Variable or value? |
 | :---: | :---: |
 | name |   |
@@ -22,6 +22,7 @@
 | "15" |   |
 
 3. Which of the following are valid variable names?
+
 | Example |	Valid? (Y/N) |
 | :---: | :---: |
 | 10_years |   |
@@ -36,8 +37,9 @@
 >>> dogs - 10
 ```
 5. What do the following evaluate to? (If an error results, write Error.)
+
 | Example |	Result |
-| :---: |   :------:   |
+| :---: | :------: |
 | ``` 'cat' + 'dog' ``` |        |
 | ``` 2 + 3 ``` |     |
 | ``` 15 + '6' ```|     |
