@@ -9,7 +9,7 @@
 | / |   |
 | 3.14 |   |
 | 15 |   |
-| == |   |
+| ** |   |
 
 2. Which of the following are variables and which are strings?
 
