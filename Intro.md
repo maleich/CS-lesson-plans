@@ -69,7 +69,7 @@ To convert between types, use type functions:
 * bool()
 (Note that this only works when the conversion makes sense.)
 
-```Python
+```python
 int('Hello')    # This will give an error!
 ```
 ```
@@ -77,6 +77,7 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ValueError: invalid literal for int() with base 10: 'Hello'
 ```
+
 ### Types of errors
 You will see a lot of errors, especially at the beginning. If Python doesn't understand what you want, it doesn't guess. It just spits out an error message.
 
@@ -96,6 +97,6 @@ SyntaxError: EOL while scanning string literal
 ```
 
 #### Runtime errors
-Runtime errors appear when you run the program.
+Runtime errors appear when you run the program (as opposed to errors that keep the program from running). They are also called *exceptions* becuase they show something exceptional (ie: bad) has happened.
 
 ####
