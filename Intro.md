@@ -27,11 +27,11 @@ Comments let you leave notes, too!
 Python operators (in order of precedence):
 
 | Operator | Operation | Example | Evaluates to: |
-|  :---:   |  :---:    |  :---:  |     :---:     |
-|   **     |  Exponent |  2 ** 3 |       8       |
-| % | Modulus/remainder | 22 % 8  | 6 |
+|:---:|:---:|:---:|:---:|
+| ** | Exponent | 2 ** 3 | 8|
+| % | Modulus/remainder | 22 % 8 | 6 |
 |// | Integer division | 22 // 8 | 2 |
-| / | Division | 22 /8 | 2.75
+| / | Division | 22 /8 | 2.75 |
 | * | Multiplication | 3 * 5 | 15|
 | - | Subtraction | 5 - 2 | 3 |
 | + | Addition | 5 + 2 | 7 |
@@ -156,4 +156,41 @@ So does this:
 x = int(input())    # Be careful - if the user enters a word, an error will occur.
 ```
 
-## Concatenation
+## Working with strings
+Strings are everywhere in programming! Almost everything that isn't a number (int or float) is a string.
+
+Three examples (among many) of string usage are:
+* collecting user input
+* displaying words on the screen (instructions, for example)
+* working with data that includes words (addresses, names, etc)
+
+Reminder: strings are surrounded by '' or "".
+
+Examples:
+```
+>>> name = input("Enter your name: ")    # collects user name (as a string)
+ and assigns it to the variable called name
+ ```
+
+ ```
+ print('Hello')    # Hello is a string
+ ```
+### Sticking strings together (concatenation)
+Adding numbers together computes the sum of those numbers. Adding strings together sticks them together.
+
+```
+>>> print()'Hello' + 'world')
+Helloworld
+```
+
+Note the strings are stuck to each other with no space. If you want a space you can include it as part of a string or you can use separate the strings with a comma. (There are other options, too.) How you do it will depend on what you are doing.
+
+```
+>>> print()'Hello ' + 'world')    # added space at the end of Hello
+Hello world
+
+>>> print()'Hello' , 'world')    #    printed each string in sequence
+Hello world
+```
+
+#### More on strings next time!
