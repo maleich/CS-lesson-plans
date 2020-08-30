@@ -29,7 +29,7 @@ Python operators (in order of precedence):
 | / | Division | 22 /8 | 2.75
 | * | Multiplication | 3 * 5 | 15|
 | - | Subtraction | 5 - 2 | 3 |
-| + | Addition | 5 + 2 | 7 | 
+| + | Addition | 5 + 2 | 7 |
 
 Parentheses are your friends! Be careful of order of operations.
 
@@ -48,7 +48,7 @@ Safer to use parentheses to be sure you get what you what - and make it easier t
 30
 ```
  Play with the Console for a bit. Notice any errors you get - or other unexpected behavior.
- 
+
  ### Data types
  Data can have four main data types:
  * int - integers
@@ -60,7 +60,7 @@ To check the type, use function type()
 ```python
 >>> type(3)
 <class 'int'>
-``` 
+```
 
 To convert between types, use type functions:
 * int()
@@ -69,6 +69,33 @@ To convert between types, use type functions:
 * bool()
 (Note that this only works when the conversion makes sense.)
 
-```
+```Python
 int('Hello')    # This will give an error!
 ```
+```
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: 'Hello'
+```
+### Types of errors
+You will see a lot of errors, especially at the beginning. If Python doesn't understand what you want, it doesn't guess. It just spits out an error message.
+
+Fortunately, these messages are often (but not always) helpful in figuring out what went wrong.
+
+#### Syntax errors
+Syntax errors are errors in the language of Python. Just like there are rules for punctuation and capitalization in English, Python has its own rules. In the example below, the string is missing one the quotes. Python won't guess what is meant. It just quits and spits out a nasty message (aka 'nastygram').
+
+```python
+>>> print('hello)
+```
+```
+  File "<stdin>", line 1
+    print('hello)
+                ^
+SyntaxError: EOL while scanning string literal
+```
+
+#### Runtime errors
+Runtime errors appear when you run the program.
+
+####
