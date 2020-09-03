@@ -28,12 +28,14 @@ Truth tables are commonly used to keep track of the outputs of logical operators
 
 Truth table for ```and```:
 
+
 | a | b | a and b |
-| :-: | :---: | :---: |
+| :---: | :---: | :---: |
 | True | True | True |
 | False | True | False |
 | True | False | False |
 | False | False | False |
+
 
 Truth table for ```or```:
 
@@ -76,4 +78,3 @@ else:
 ```
 
 Note the indentations for each block. The indented blocks go with the statements above them and only run if those statements are True. **Be careful with indentations - incorrect indentations can cause unexpected behavior!**
-  
