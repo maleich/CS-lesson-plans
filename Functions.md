@@ -12,8 +12,8 @@ There are lots of built in functions in Python, but this guide is focused on how
 
 ```python
 def function_name():
-	#Code to run when function is called goes here
-	return data # this is optional, it is not always needed
+    #Code to run when function is called goes here
+    return data # this is optional, it is not always needed
 ```
 
 A function can be called at any time during the program by typing its identifier.  The code for calling a function looks like this:
