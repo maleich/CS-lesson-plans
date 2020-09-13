@@ -69,16 +69,16 @@ You may hear the terms ‘procedure’ or ‘subroutine’ referred to in other 
  # The program below uses functions.  Add comments to predict the output in the order that it has been coded here.
 
 def say_hi():
- print("Why hello there!")
+	print("Why hello there!")
 
 def offer_drink():
- print("Would you care for a spot of tea?")
+	print("Would you care for a spot of tea?")
 
 def offer_food():
- print("Biscuit?")
+	print("Biscuit?")
 
 def say_bye():
- print("Cheerio then.")
+	print("Cheerio then.")
 
 
 offer_drink()
@@ -103,7 +103,7 @@ offer_food()
 Functions can also return a result (some data) to the main program.
 The code for this is:
 ```python
-return data
+	return data
 ```
 
 This line of code is usually the last one in a function. If a function has multiple ways it can end, you may also have multiple return statements.
@@ -124,10 +124,10 @@ def adder():
 	return num1 + num2
 
 # Calls the adder function and stores the data returned
-outputNum = adder()
+output_num = adder()
 
 # Outputs the data in the outputNum variable
-print(outputNum)
+print(output_num)
 ```
 Note the indentation levels in the code above. Make sure you are clear what is part of the function and what is outside the function.
 
@@ -141,23 +141,23 @@ Note the indentation levels in the code above. Make sure you are clear what is p
  ```python
  # Add comments to explain what the output from this program will be and how you know.
 
-def maths1():
- num1 = 50
- num2 = 5
- return num1 + num2
+def math1():
+	num1 = 50
+	num2 = 5
+	return num1 + num2
 
-def maths2():
- num1 = 50
- num2 = 5
- return num1 - num2
+def math2():
+    num1 = 50
+    num2 = 5
+    return num1 - num2
 
-def maths3():
- num1 = 50
- num2 = 5
- return num1 * num2
+def math3():
+    num1 = 50
+    num2 = 5
+    return num1 * num2
 
-outputNum = maths2()
-print(outputNum)
+output_num = math2()
+print(output_num)
 ```
 
 #### Task 2
@@ -180,7 +180,7 @@ In this first example we will feed data into the function by using a specific nu
 
 ```python
 def add_five(num1):
-	print(num1 + 5)
+    print(num1 + 5)
 
 add_five(42)
 ```
@@ -188,7 +188,7 @@ add_five(42)
 The second example performs the same task, but this time the user can input a number rather than have it fixed to 42.  A variable called user_input is used to store the value typed by the user.  That value is then used as an argument when the function is called, passing it into the function as num1.
 ```python
 def add_five(num1):
- print(num1 + 5)
+	print(num1 + 5)
 
 user_input = int(input("Enter a number"))
 add_five(user_input)
@@ -201,8 +201,8 @@ add_five(int(input("Enter a number")))
 For now, consider sticking with 2 steps for this until you feel more comfortable with the control flow.
 
 ### Tasks
-*[Task and instructions](https://repl.it/@MrAColley/63-Functions-With-Arguments)
-*[Example solution](https://repl.it/@MrAColley/63-Functions-With-Arguments-Example-Solution)
+* [Task and instructions](https://repl.it/@MrAColley/63-Functions-With-Arguments)
+* [Example solution](https://repl.it/@MrAColley/63-Functions-With-Arguments-Example-Solution)
 
 
 #### Homework Task - Calculator
