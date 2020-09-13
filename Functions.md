@@ -209,7 +209,7 @@ For now, consider sticking with 2 steps for this until you feel more comfortable
 
 [Example solution](https://repl.it/@MrAColley/64-Homework-Task-Example-Solution)
 
-Define four functions - add, subtract, multiply, divide that add multiply etc two numbers and return the result. Each should have two integer number arguments.
+Define four functions - add, subtract, multiply, divide that add (or multiply etc) two numbers and return the result. Each should have two integer number arguments.
 
 The user is asked to input two numbers.  These numbers will be passed as arguments into one of the functions.
 
