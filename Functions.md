@@ -114,14 +114,13 @@ To call a function that returns data, create a variable in the main program and 
 ### Creates & names the function
 ```python
 def adder():
-
-	# Stores two numbers in two variables.
-	num1 = 10
-	num2 = 15
+    # Stores two numbers in two variables.
+    num1 = 10
+    num2 = 15
 
 # Adds the variable contents together and returns the total to the main program
 
-	return num1 + num2
+    return num1 + num2
 
 # Calls the adder function and stores the data returned
 output_num = adder()
