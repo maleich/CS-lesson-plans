@@ -69,16 +69,16 @@ You may hear the terms ‘procedure’ or ‘subroutine’ referred to in other 
  # The program below uses functions.  Add comments to predict the output in the order that it has been coded here.
 
 def say_hi():
-	print("Why hello there!")
+    print("Why hello there!")
 
 def offer_drink():
-	print("Would you care for a spot of tea?")
+    print("Would you care for a spot of tea?")
 
 def offer_food():
-	print("Biscuit?")
+    print("Biscuit?")
 
 def say_bye():
-	print("Cheerio then.")
+    print("Cheerio then.")
 
 
 offer_drink()
