@@ -34,7 +34,7 @@ When the function is called, we usually store the returned data in a new variabl
 ```python
 new_variable = function_name()
 
-print(newVariable)
+print(new_variable)
 ```
 
 PLEASE NOTE - a lot of the functions in the following tasks are very simplistic.  They've been broken down to show how to define & call functions but you wouldn't really write functions for these tasks. Functions become progressively more useful as your programs become more complex.
