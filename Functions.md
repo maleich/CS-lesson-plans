@@ -103,7 +103,7 @@ offer_food()
 Functions can also return a result (some data) to the main program.
 The code for this is:
 ```python
-	return data
+    return data
 ```
 
 This line of code is usually the last one in a function. If a function has multiple ways it can end, you may also have multiple return statements.
@@ -204,9 +204,7 @@ For now, consider sticking with 2 steps for this until you feel more comfortable
 * [Example solution](https://repl.it/@MrAColley/63-Functions-With-Arguments-Example-Solution)
 
 
-#### Homework Task - Calculator
-
-[Example solution](https://repl.it/@MrAColley/64-Homework-Task-Example-Solution)
+#### Assignment - Calculator
 
 Define four functions - add, subtract, multiply, divide that add (or multiply etc) two numbers and return the result. Each should have two integer number arguments.
 
