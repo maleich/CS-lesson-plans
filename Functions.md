@@ -53,7 +53,7 @@ A function is just a ‘package’ for code.  You can write any code inside a fu
 
 * A function will not run when it is created (using the def command). It has to be called in the program.
 
-* A function can have many arguments.  They are separated by commas in the brackets when the function is defined.
+* A function can have many parameters.  They are separated by commas in the brackets when the function is defined.
 
 You may hear the terms ‘procedure’ or ‘subroutine’ referred to in other programming languages.  In more complex languages these are other ‘flavors’ of functions that work in slightly different ways.  However, at this level Python handily combines them all into functions.
 
