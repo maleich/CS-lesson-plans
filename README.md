@@ -5,3 +5,4 @@ This repo contains handouts on various aspects of Python:
 * [Strings](Strings.md)
 * [Booleans & Conditionals](Booleans_conditionals.md)
 * [Functions](Functions.md)
+* [Working with Files](Files.md)
