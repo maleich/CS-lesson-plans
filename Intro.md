@@ -72,6 +72,7 @@ To convert between types, use type functions:
 * float()
 * str()
 * bool()
+
 (Note that this only works when the conversion makes sense.)
 
 ```
