@@ -74,6 +74,6 @@ What if we want to find the average temperature in October? How could you use th
 Be careful - pay attention to data types as you do this! Use `print(type(x))` to determine the type of an element `x
 ` if you aren't sure!
 
-If you don't like long decimals, you can use the `round(x,y)` function, where the first argument is the variable you
+At the end, rouond your answer to the hundredths place. You can use the `round(x,y)` function, where the first argument is the variable you
  want to round and the second argument is the number of decimal places you want. 
  
