@@ -25,3 +25,55 @@ Replace `print(contents)` with `print(contents.rstrip())` and run the program ag
  
 
 ### Reading the file line by line
+Often, you will want to read each line of the file individually. You can do that by opening it and then using a `for
+` loop to cycle through each line.
+
+```python
+with open('temps.txt') as file_object:    # opens the file and assigns it to file_object
+    for line in file_object:              # loops through each line
+        print(line)
+```
+
+Note that you now have blank lines after each line from the file. You can remove them in the printout using `rstrip
+()` again: `print(line.rstrip())` 
+
+### Creating a list of lines
+Lists are far more convenient to work with that the raw file, which is only available while the file is open. To
+ create a list of lines, you can use a method called `readlines()` that automatically reads each line and appends
+  them to a list.
+
+```python
+with open('temps.txt') as file_object:    # opens the file and assigns it to file_object
+    line_list = file_object.readlines()       # reads each line and appends it to a list
+
+print(line_list)
+```
+
+Note that each element has the `\n` newline escape character at the end. This is what the `rstrip()` method was
+ removing before printing in the examples above. If we want to work with the data, it's better to remove those
+  characters permanently! We can do that by cycling through the list and stripping them off each element - and then
+   reassigning the stripped element back to itself:
+
+```python
+with open('temps.txt') as file_object:
+    line_list = file_object.readlines() 
+
+list_length = len(line_list)    # determines the length of the list
+for i in range(list_length):
+    line_list[i] = line_list[i].rstrip()    # removes the newline whitespace
+
+print(line_list)
+
+```
+
+Now the list has each entry as it was in the original file. You also have all of the list tools at your disposal.
+
+What if we want to find the average temperature in October? How could you use the tools you know to find the average
+ of the values in the list? (Hint: you've done this before! See the "Average x" assignment!)
+
+Be careful - pay attention to data types as you do this! Use `print(type(x))` to determine the type of an element `x
+` if you aren't sure!
+
+If you don't like long decimals, you can use the `round(x,y)` function, where the first argument is the variable you
+ want to round and the second argument is the number of decimal places you want. 
+ 
