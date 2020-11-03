@@ -1,5 +1,6 @@
-# Reading from & Writing to Files
-This document is written to be used with the File Intro assignment, but can be applied to other situations as well. Note that the files mentioned are specific to this assignment and you will need to use different names if
+# Reading from Files
+This document is written to be used with the Reading Files assignment, but can be applied to other situations as well
+. Note that the files mentioned are specific to this assignment and you will need to use different names if
  you are using different files.
 ## Reading a file
 First, be sure the file you want to read is a .txt file and is in the same directory as your .py file. As we start
