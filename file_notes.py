@@ -3,13 +3,13 @@
 
 
 # Read temps.txt and print it without the blank line at the end
-#with open('temps.txt') as file_object:
+# with open('temps.txt') as file_object:
 #    contents = file_object.read()
-#print(contents.rstrip())
-#print('cat')
+# print(contents.rstrip())
+# print('cat')
 
 # Read temps.txt line by line and print with no whitespace
-#with open('temps.txt') as file_object:
+# with open('temps.txt') as file_object:
 #    for line in file_object:
 #        print(line.rstrip())
 
@@ -26,3 +26,13 @@ list_length = len(line_list)
 for i in range(list_length):
     line_list[i] = line_list[i].rstrip()
 print(line_list)
+
+# writing to empty file
+filename = 'programming.txt'
+
+with open(filename, 'w') as file_object:
+    file_object.write("I'm tired of Zoom.")
+# Note: files can be opened in read ('r), write ('w') or append ('a') modes. Default is read-only.
+# Also note - you can only write strings this way. Data will need to be converted to str format
+
+
