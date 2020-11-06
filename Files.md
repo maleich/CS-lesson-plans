@@ -1,4 +1,4 @@
-# Reading from Files
+# Reading from & Writing to Files
 This document is written to be used with the Reading Files assignment, but can be applied to other situations as well
 . Note that the files mentioned are specific to this assignment and you will need to use different names if
  you are using different files.
