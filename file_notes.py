@@ -32,7 +32,14 @@ filename = 'programming.txt'
 
 with open(filename, 'w') as file_object:
     file_object.write("I'm tired of Zoom.")
+    file_object.write("hi")
 # Note: files can be opened in read ('r), write ('w') or append ('a') modes. Default is read-only.
 # Also note - you can only write strings this way. Data will need to be converted to str format
+
+
+# Writing to an empty file
+with open('sample.txt', 'w') as file_object:
+    file_object.write('Is it break time yet?')
+
 
 

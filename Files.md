@@ -78,3 +78,59 @@ Be careful - pay attention to data types as you do this! Use `print(type(x))` to
 At the end, round your answer to the hundredths place. You can use the `round(x,y)` function, where the first argument is the variable you
  want to round and the second argument is the number of decimal places you want. 
  
+## Writing to Files
+### Writing to an empty file
+
+First, decide what you will name your file. Then, open the file in write-mode by using the argument `'w'` in `open
+()`. The `'w'` indicates that we are opening the file in "write" mode; other modes are "read" `'r'`, "append" `'a
+'` and read-an-write `'r+'`. The default mode is "read-only" which is why we didn't use these arguments when we learned
+ how to
+ read
+ files.
+
+```python
+with open('sample.txt', 'w') as file_object:
+    file_object.write('Is it lunch time yet?')
+```
+*Be cautious about opening existing files in write mode because Python will erase the file before returning the file
+ object.*
+ 
+ If you type the code above into a Python file and run it, you should see a new file called `sample.txt` appear in
+  the file list for your repo. Open it and you should see the sentence you wrote to it.
+  
+You can write multiple lines as long as the file is open:
+```python
+with open('sample.txt', 'w') as file_object:
+    file_object.write('Is it lunch time yet?')
+    file_object.write("I'm hungry!")    # Note that double quotes are needed to use an apostrophe in the string!
+```
+
+Note that by running this code, you will erase the previous contents of `sample.txt`.
+
+If you look at `sample.txt` you will see this:
+`Is it lunch time yet?I'm hungry!`
+
+The two lines are stuck together. If you want them to be on separate lines, you will need to add a newline "escape
+ character" `\n` to the end of the previous line. For the sake of completeness, it's best to end each line with one.
+
+```python
+with open('sample.txt', 'w') as file_object:
+    file_object.write('Is it lunch time yet?\n')
+    file_object.write("I'm hungry!\n")   
+```
+You should now see the output on separate lines:
+```
+Is it lunch time yet?
+I'm hungry!
+```
+
+### Appending to a file
+Opening a file in "write" mode erases the file and writes new text to it. If you want to *add* text to a file, you
+ will need to **append** using `'a'`. 
+ ```python
+with open('sample.txt', 'a') as file_object:
+    file_object.write('A cup of tea would be nice too.\n') 
+    file_object.write('A walk would be good too.\n') 
+```
+
+Note that we still use the `write()` method; the only difference is the use of `'a'` instead of `'w'`.
