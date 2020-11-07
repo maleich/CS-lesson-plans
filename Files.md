@@ -5,7 +5,7 @@ First, be sure the file you want to read is a .txt file and is in the same direc
 
 To open and read the `temps.txt` file, be sure you have the correct assignment open and then enter the following into PyCharm:
 ```python
-with open('temps.txt') as file_object:    # opens the file and assigns it to file_object
+with open('text_files/temps.txt') as file_object:    # opens the file and assigns it to file_object
     contents = file_object.read()       # reads the entire file and assigns it to contents
 print(contents)
 ```
@@ -21,7 +21,7 @@ Replace `print(contents)` with `print(contents.rstrip())` and run the program ag
 Often, you will want to read each line of the file individually. You can do that by opening it and then using a `for` loop to cycle through each line.
 
 ```python
-with open('temps.txt') as file_object:    # opens the file and assigns it to file_object
+with open('text_files/temps.txt') as file_object:    # opens the file and assigns it to file_object
     for line in file_object:              # loops through each line
         print(line)
 ```
@@ -32,7 +32,7 @@ Note that you now have blank lines after each line from the file. You can remove
 Lists are far more convenient to work with that the raw file, which is only available while the file is open. To create a list of lines, you can use a method called `readlines()` that automatically reads each line and appends them to a list.
 
 ```python
-with open('temps.txt') as file_object:    # opens the file and assigns it to file_object
+with open('text_files/temps.txt') as file_object:    # opens the file and assigns it to file_object
     line_list = file_object.readlines()       # reads each line and appends it to a list
 
 print(line_list)
@@ -41,7 +41,7 @@ print(line_list)
 Note that each element has the `\n` newline escape character at the end. This is what the `rstrip()` method was removing before printing in the examples above. If we want to work with the data, it's better to remove those characters permanently! We can do that by cycling through the list and stripping them off each element - and then reassigning the stripped element back to itself:
 
 ```python
-with open('temps.txt') as file_object:
+with open('text_files/temps.txt') as file_object:
     line_list = file_object.readlines()
 
 list_length = len(line_list)    # determines the length of the list
