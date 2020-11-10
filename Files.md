@@ -16,6 +16,17 @@ Add another print statement after `print(contents)` and run the program. Notice 
 
 Replace `print(contents)` with `print(contents.rstrip())` and run the program again.
 
+#### Error?
+A common error looks like this:
+`UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 304: character maps to <undefined>`
+
+This happens when the encoding is different from what your computer expects. You may need to specify the encoding
+ type, as shown below. The most common types are `"utf-8"`, `"utf-16"` and `"utf-32"`
+```python
+with open('text.txt', encoding="utf-8") as file_object:
+    a = file_object.read()
+    print(a)
+```
 
 ### Reading the file line by line
 Often, you will want to read each line of the file individually. You can do that by opening it and then using a `for` loop to cycle through each line.

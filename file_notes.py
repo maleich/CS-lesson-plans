@@ -3,8 +3,8 @@
 
 
 # Read temps.txt and print it without the blank line at the end
-# with open('text_files/temps.txt') as file_object:
-#    contents = file_object.read()
+with open('text_files/temps.txt') as file_object:
+    contents = file_object.read()
 # print(contents.rstrip())
 # print('cat')
 
