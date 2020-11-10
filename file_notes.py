@@ -53,4 +53,3 @@ with open('text_files/sample.txt', 'a') as file_object:
     file_object.write('A cup of tea would be nice.\n')
     file_object.write('A walk would be good too.\n')
 
-
