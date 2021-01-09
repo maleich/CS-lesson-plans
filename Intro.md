@@ -1,4 +1,4 @@
-# Python Day 1
+# Introduction to Python
 ## Hello world
 Use the command line for these.
 
