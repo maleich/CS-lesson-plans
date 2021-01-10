@@ -6,8 +6,8 @@ Strings are an example of a data type. There are several different data types in
 String data is always treated as text by the program, even if it contains numeric characters. You cannot do mathematical calculations (addition, subtraction, etc.) with strings.  They have to be converted (cast) to a numeric data type (`int`, `float`) first.
 
 ### Printing strings
-As you have already seen, strings can be printed using the `print()` fucntion:
-```
+As you have already seen, strings can be printed using the `print()` function:
+```python
 print("Hello world!")
 print('Hello Python!')
 ```
@@ -22,13 +22,13 @@ Python will consider the string to be defined by the first 2 quotes (`Let`) and 
 
 To print this phrase, use double quotes around the entire string:
 
-```
+```python
 print("Let's get started")
 ```
 
 Similarly, if you wanted to include quotation marks in your string, you would use single quotes at the start and end.
 
-```
+```python
 print('She said, "I like Python!"')
 ```
 What if you want to include both an apostrophe and quotes in your string? You can use something called escape characters - more on that later. (See the section below on escape characters!)
@@ -36,299 +36,201 @@ What if you want to include both an apostrophe and quotes in your string? You ca
 ### Concatenation
 Strings can be stuck together (concatenated) using the `+` operator. For example, `'cat' + 'dog'` will create the string `'catdog'` and `'2' + '3'` will give `'23'`. Note that this is a string and should not be confused with the number `23`.
 
+### Storing strings in variables
+Strings can be assigned to variables using the assignment operator (`=`):
+```python
+school = 'Athenian'		# assigns the string 'Athenian' to the variable school
+```
 
+### Printing, revisited
+There are multiple ways to print combinations of strings. Consider the following example.
+```python
+>>> pet = input('What kind of pet do you have?')
+dog
+>>> print('I have a ' + pet + ' too!' )
+I have a dog too!
 
+```
+The user is prompted to type the kind of pet they have (`dog`), and a response is printed. The parameter in the print function is 3 separate strings that are concatenated. Note the space at the end of the first string and at the start of the last string. Python does not place spaces in between strings when concatenating them, so you need to add them for your sentences to be formatted correctly.
+
+Another way to achieve the same result is to print the strings separately, without concatenation:
+```python
+>>> pet = input('What kind of pet do you have?')
+dog
+>>> print('I have a', pet, 'too!' )
+I have a dog too!
+
+```
+Note that the extra spaces are not needed here; Python automatically places spaces between each string here since they are separate strings that are printed sequentially rather than being concatenated.
+
+Finally, there is a relatively new way using "formatted strings" or "f-strings."
+
+```python
+>>> pet = input('What kind of pet do you have?')
+dog
+>>> print(f'I have a {pet} too!' )
+I have a dog too!
+
+```
+In this case, the entire sentence is included as a string, with the variable inserted in {}. Note the `f` in front of the string; the `f` stands for format and tells Python that the string is a formatted string.
+
+F-strings make using multiple variables in one sentence - or paragraph - much easier than the other two versions.
 
 ### Escape Characters
-You can do some logical comparisons of strings (equal to, not equal to). Python has lots of string functions built in - this means that they have already been coded and included in python and we can use them by calling them (typing their name) and setting their parameters like this:
+Escape characters allow you to insert characters into a string that are typically not allowed. For example, you can use them to put quotes inside a string even when you've already used them to define the string.
+
+```
+print('Then they said, "Let\'s go to the game."')
+```
+
+Escape characters are defined by a backslash (`\`), so to include the extra apostrophe, use the backslash followed by the apostrophe. In the example above, both the single and double quotes are needed in the string. It's recommended to surround the string with the quotes that will allow you to use the fewest escape characters.
+
+Other escape characters are:
+
+| Character    |    Result   |
+| :------------- | :------------- |
+| `\t`      | tab       |
+| `\n`      | newline   |
+| `\"`      | double quotes  |
+| `\\`      | backslash  |
+
+
+
+### Operations
+For the most part, mathematical operators don't work well with strings, which makes sense. For example, adding `2` to `dog` doesn't make much sense. However, you can multiply `dog` by a number. Just as multiplying a number by two is the same as adding two of that number together, multiplying a string by 2 concatenates the string with itself:
+
+```python
+>>> 2 * 'dog'
+'dogdog'
+
+>>> 4 * 'spam'
+'spamspamspamspam'  # 4 spams stuck together
+```
+
+You can do some logical comparisons of strings (equal to (`==`) and not equal to (`!=`)). Another operator (`in`) checks to see if a character is *in* a string. These are all very useful and will be revisited in the section on Booleans & Conditionals.
+
+### Built-in Functions
+Python has lots of string functions already included. This means that they have already been coded and we can use them by **calling** them (typing their names) and setting their parameters like this:
 
 `string_function_name(parameter)`
 
-Some string functions take the string as their only parameter, others need further parameters, which we will look at in the examples.
-All of these functions return a value. We will start by storing these values in variables, but will progress on to skipping that step and using the functions directly in output, selection etc.
-The advantages of using built in functions are that it saves us time, and that these functions have already been pre-tested so we know that they will work.
-There are lots of different string functions, we are just going to use some of the most common ones.
+You have already seen an example of a predefined function: `print()`. In this case, the parameter that is typed in the parentheses is whatever you want the function to print.
 
+Some string functions take the string as their only parameter, while others need further parameters. All of these functions **return** a value. We will start by storing these values in variables, but will progress on to skipping that step and using the functions directly as needed. (That will become clear in the examples.)
 
+The advantages of using built-in functions are:
+*  saving time
+*  they are pre-tested so we know that they work
 
+There are lots of different string functions. These are some of the more common ones, but you can look others up online if you are curious - or if you need them.
 
-1 - Len - returns the number of characters in a string.
+#### Len - returns the number of characters in a string.
 
-TEACHER NOTES
-The len() function returns the number of characters in a string.  It takes the string as its parameter.
-It’s one of the simplest built in functions so we will use it to introduce the skill.
-Space is counted as a character, as is any punctuation.
+The `len()` function returns the number of characters in a string.  It takes the string as its parameter. Note that spaces are counted as characters, as are any punctuation marks.
 
-This set of tasks will also introduce the concept of coding more efficiently by including the function in the print or selection condition.  This can be applied to all of the subsequent functions (examples 3b & 4b), higher ability students will probably prefer this.  If students struggle to conceptualise this then encourage them to call the function and return the result into a variable (examples 3a and 3b).
-Examples
+Try this in the command line:
+```python
+>>> len('aardvark')
+8
 
-Example 1 - The function on its own
-len(“Banana”)
-Returns 6.
+>>> len('python')
+6
+```
+If we want to use the returned value, we can assign it to a variable. In the command line, it could look like this:
+```python
+>>> word_length = len('parrot')
 
-Example 2 - Storing the returned value in a variable
-# Returns the number 6 into the variable wordLength
-wordLength = len(“Banana”)
+>>> word_length
+6
+```
+(Remember that the command line dispays the value of the variable without the `print()` function.)
 
-# Outputs the data in the wordLength variable
-print(wordLength)
+In the editor, the same example would look like this:
+```python
+word_length = len('parrot')
+print(word_length)
+```
+The value of `word_length` (6) would be displayed in the output window.
 
-Example 3a- Getting input and finding out its length
+We can also get a word from the user and then find the length:
+```python
+word = input('Enter a word: ')
+word_length = len(word)
+print(word_length)
+```
+An even shorter way of doing this is to use the `len()` function inside the `print()` function:
 
-# Gets input and stores it in the word variable
-word = input(“Enter a word”)
-
-# Returns the length of the string in the word variable into the variable wordLength
-wordLength = len(word)
-
-# Outputs the data in the wordLength variable
-print(wordLength)
-
-Example 3b - A more efficient way of coding example 3a
-
-# Gets input and stores it in the word variable
-word = input(“Enter a word”)
-
-# Uses the len() function as part of the print() function.  Removes the need for the # wordLength variable.
+```python
+word = input('Enter a word: ')
 print(len(word))
+```
+
+Whether you use this condensed form is up to you. It involves less typing, but it can be harder to read and understand quickly. If you find it easier to keep track of everything when you write it step by step, do that!
 
 
+##### Task: Word-length calculator
+* ask the user for a word
+* use `len()` to determine the length of the word
+* print a response telling the user the length of their word. Use the word and then length in your printed response.
 
 
-Example 4a - len with selection
+#### Slices
+Slicing returns one or more characters from a string. Each character is given an index number starting with 0.
 
-# Gets input and stores it in the word variable
+```python
+>>> word = 'banana'
+>>> word[0]
+'b'
+>>> word[2]
+'n'
+>>> word[5]
+'a'
+```
+Note that the six-letter word above has indices 0 through 5. If you reference an invalid index, you will get an error.
 
-word = input(“Enter a word”)
+Slicing can also return more than 1 letter. If you provide two indices, Python will return the letters between them.
+Note that the letter at the first index is returned along with the letters **up to, but not including** the second index.
+```
+>>> word = 'giraffe'
+print(word[0:3])
+```
+The string `gir` will display when the code above is run.
 
-# Returns the length of the string in the word variable into the variable wordLength
-
-wordLength = len(word)
-
-# Outputs a message if the string in wordLength has more than 50 characters in it.
-
-If wordLength > 50:
-	print(“Wow, what a long word!”)
-
-Example 4b - a more efficient way of coding
-
-# Gets input and stores it in the word variable
-
-word = input(“Enter a word”)
-
-# Uses the len() function as part of the condition. Outputs a message if the string # in wordLength has more than 50 characters in it.
-
-If len(word) > 50:
-	print(“Wow, what a long word!”)
-
-
-Tasks
-Len - Predict and Run
-
-Task - https://repl.it/@MrAColley/11-len-1
-Example solution - https://repl.it/@MrAColley/11-len-1-solution
-
-
-# Task
-
- # Add comments to each line of the code to predict what it will do.  Run it to see if your predictions were correct.
-
-wordLength = len("Hello World!")
-
-print(wordLength)
-
-word = "I love strings!"
-
-wordLength = len(word)
-
-print(wordLength)
-
-Len - Investigate & Modify
-
-This task requires students to finish incomplete code.
-
-Task - https://repl.it/@MrAColley/12-Len-2
-Example solution - https://repl.it/@MrAColley/12-Len-2-solution
-# Task
-  # Complete the code below using the comments to tell you what to do.abs
-# Get input from the user and store it in a variable called word.
-input("Enter a word")
-# Get the length of the word variable and store it in the wordLength variable
-wordLength =
-# Output the wordLength variable
-print
-
-
-Len With Selection
-
-Task - https://repl.it/@MrAColley/13-len-with-selection
-Example solution - https://repl.it/@MrAColley/13-len-with-selection-solution
-# Task
- # Add comments to explain what the code below should do.
- #Run it to see if your predictions were correct
-word = input(“Enter a word")
-wordLength = len(word)
-if wordLength > 50:
-  print(“Wow! That’s a long word!”)
-# Task
- # Copy the code from above. Modify it so that it checks to see if the length of the word is less than 4 and outputs a suitable message if it is.
-
-Len - Make
-
-Task instructions - https://repl.it/@MrAColley/14-Len-Independent-Task
-Example solution - https://repl.it/@MrAColley/14-Len-Independent-Task-solution
-
+##### Task
 Write a program that:
+* Asks the user to input a word and stores it in a suitably named variable
+* Tells the user the length of the word
+* Asks the user to input a number between 0 and the largest index and stores it in a suitably named variable.
+* Prints a message with the letter at that index.
+* Asks the user for a start index and an ending index.
+* Prints the characters between those indices
 
-Asks the user to input an 8 letter word.
-Stores the input in a variable.
-Calculates the length of the word input.
-If the word is more than 8 characters, output ‘Too long’
-If the word is less than 8 characters, output ‘Too short’
-If the word is 8 characters, output ‘Perfect, thank you!’
+#### Changing cases
+Technically, these are **methods** rather than **functions** but we'll talk more about that later. For now, the main difference is that a parameter doesn't go in the parentheses.
 
-2 - GetChar - Slice - Returns one character from a string.
-Teacher Notes
+These methods (functions in disguise) allow you to work around issues that arise with different cases (upper, lower). Remember that in Python, 'Yes' and 'yes' are different, even though you may want to treat them as being the same in your program.
 
-Get Char returns one character from a string.  Python uses slices to do this.
-Slices treat strings like lists. Each character is given an index number starting with 0.
-The get char slice uses one index, the index of the character returned.
-The slice index comes in brackets after the string or the variable containing the string.
-
-Examples
-
-# Outputs the characters  ‘p’
-
-print(“Computing”[3])
-
-# Gets input and stores it in the word variable
-word = “dalmatian”
-
-#returns the character ‘t’ (character at index 5 of the word variable) into the letter variable
-letter = word[5]
-
-Tasks
-
-GetChar - Predict & Run
-Task instructions - https://repl.it/@MrAColley/15-GetChar-Predict-and-Run
-Example solution - https://repl.it/@MrAColley/15-GetChar-Predict-and-Run-Example-Solution
-
-GetChar - Investigate & Modify
-Task instructions - https://repl.it/@MrAColley/2106-GetChar-Investigate-Modify
-Example solution - https://repl.it/@MrAColley/2106-GetChar-Investigate-Modify-Solution
-
-
-
-GetChar - Make
-
-Students will need to convert the number input to int using int(input(“Enter a number”)  and convert the int back to a string when outputting using print("The letter at position " + str(num1)
-
-
-Example solution - https://repl.it/@MrAColley/2106-GetChar-Investigate-Modify-Solution
-
-Write a program that:
-
-Asks the user to input a word and stores it in a suitably named variable
-Asks the user to input a number and stores it in a suitably named variable.
-If the number entered is larger than the length of the word input then output an error message.
-Else output the character from the word at the position input as part of a sentence.
-
-Eg for inputs ‘Jimi’ and ‘2’ the program outputs ‘The letter m is at position 2 in your name’.
-For inputs ‘Jimi’ and ‘6’ the program outputs ‘The number you entered is too large’.
-
-3 - Slice/Substring - Returns a part of a string
-Teacher Notes
-
-A substring returns a sequence of characters from a string.  Python uses slices to do this.
-Slices treat strings like lists. Each character is given an index number starting with 0.
-The slice uses two indexes, the start character and the end character (NOTE the end character is NOT INCLUDED in the slice).
-The slice indexes come in brackets after the string or the variable containing the string.
-
-Examples:
-
-# Outputs the characters  ‘ompu’
-
-print(“Computing”[1:5]
-
-# Gets input and stores it in the word variable
-word = “dalmatian”
-
-#returns the characters ‘ma’ (characters at indexes 3 and 4)
-subString = word[3:5]
-
-Tasks
-
-Substring - Predict & Run
-Task instructions - https://repl.it/@MrAColley/15-Substrings-1
-Example solution -https://repl.it/@MrAColley/17-Substrings-Predict-Run-Example-Solution
-
-Substring - Investigate & Modify
-Task instructions - https://repl.it/@MrAColley/18-Substrings-Investigate-Modify
-Example solution - https://repl.it/@MrAColley/18-Substrings-Investigate-Modify-Example-Solution
-
-
-Substring - Make
-
-Example solution - https://repl.it/@MrAColley/2110-Substrings-Make-Solution
-
-Write a program that:
-
-Asks the user to input a phrase and stores it in a suitably named variable
-Asks the user to input a number between 0 and the length of the phrase and stores it in a suitably named variable.
-Asks the user to input a second number between the first number and the length of the phrase and stores it in a suitably named variable.
-Gets and outputs the substring of characters between the two numbers entered
-
-Eg for inputs ‘I love Computing’ and numbers ‘3’ and ‘7’ the output would be ‘ove’
-
-
-4 - Change Case - converts lower case to CAPS and vice versa
-Teacher Notes
-These technique use a methods rather than functions, which is why the parameter doesn’t go in the brackets after the name.  However they’re so useful that I’ve included them here anyway.  This is how to get the computer to ignore case, which means that the user can input any combination of caps/non caps.  Extremely useful when getting input where case doesn’t matter, such as for usernames.
 
 Whatever the string is, it will be converted to upper case when string.upper() is used.
 Whatever the string is, it will be converted to lower case when string.lower() is used.
+
+```python
+>>> word = 'yes'
+>>> word.upper()    # Converts the string to all uppercase
+YES
+>>> word.lower()    # Converts the string to all lowercase
+yes
+>>> word.title()    # Converts the string to titlecase (1st letter capitalized)
+Yes
+
+```
+
 The original string can be in any combination of upper/lower case, it doesn’t have to be all caps or all lowercase.
 Just like with other functions we’ve used, this technique can be combined with conditions used in selection and iteration.
 
-
-The tasks will start with us converting and assigning to variables, before using these variables in conditions.  Better students will be able to get rid of the variable by using the method in line with the condition.
-Examples:
-
-# Converts ‘hello world!’ to uppercase.
-“hello world”.upper()
-
-# Outputs ‘HELLO WORLD!’
-print(“hello world”.upper())
-
-# Converts contents of the ‘word’ variable to uppercase.
-word.upper()
-
-# Outputs the data in the ‘word’ variable in uppercase.
-print(word.upper())
-
-# Converts ‘HELLO WORLD!’ to lowercase.
-“HELLO WORLD”.upper()
-
-# Using with a condition.
-# Gets user input as answer to a question.
-guess =
-
-
-Tasks
-
-Change case - Predict & Run
-Task instructions - https://repl.it/@MrAColley/2111-Change-Case-Predict-RUN
-Example solution - https://repl.it/@MrAColley/2111-Change-Case-Predict-RUN-Solution
-
-
-Change case - Investigate & Modify
-Task instructions - https://repl.it/@MrAColley/2112-Cahnge-Case-Investigate-Modify
-Example solution - https://repl.it/@MrAColley/2112-Change-Case-Investigate-Modify-Solution
-
-
-Change case - Make
-
-Be careful that students do not ignore the case for the passwords.  Passwords are always case sensitive.
-
-Task instructions - https://repl.it/@MrAColley/2113-Change-Case-Make
-Example solution - https://repl.it/@MrAColley/2113-Change-Case-Make-Solution
+Note that the title() method will convert the first letter of every word in the string to uppercase:
+```python
+>>> greeting = 'hello world'
+>>> greeting.title()
+'Hello World'
+```
