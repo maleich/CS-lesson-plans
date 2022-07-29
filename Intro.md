@@ -211,7 +211,7 @@ Note the strings are stuck to each other with no space. If you want a space you 
 >>> print('Hello ' + 'world')    # added space at the end of Hello
 Hello world
 
->>> print()'Hello' , 'world')    #    printed each string in sequence
+>>> print('Hello' , 'world')    #    printed each string in sequence
 Hello world
 ```
 
