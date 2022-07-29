@@ -36,7 +36,9 @@ Hello world!
 4
 ```
 ## Comments
-Comments let you leave notes, too!
+Comments let you leave notes in your program. They are ignored by the computer, but they can be useful for reminding 
+yourself what you were doing when you wrote the code and for helping other people understand your code. You should 
+get in the habit of using comments to explain your code, even for simple programs.
 ```
 >>> 2 + 2    # This is an expression. 2 is a value, + is an operator.
 4           # The expression evaluates to 4
@@ -199,14 +201,14 @@ Examples:
 Adding numbers together computes the sum of those numbers. Adding strings together sticks them together.
 
 ```
->>> print()'Hello' + 'world')
+>>> print('Hello' + 'world')
 Helloworld
 ```
 
 Note the strings are stuck to each other with no space. If you want a space you can include it as part of a string or you can use separate the strings with a comma. (There are other options, too.) How you do it will depend on what you are doing.
 
 ```
->>> print()'Hello ' + 'world')    # added space at the end of Hello
+>>> print('Hello ' + 'world')    # added space at the end of Hello
 Hello world
 
 >>> print()'Hello' , 'world')    #    printed each string in sequence
