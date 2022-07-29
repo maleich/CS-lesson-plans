@@ -3,6 +3,11 @@ This document is written to be used with the Reading Files assignment, but can b
 ## Reading a file
 First, be sure the file you want to read is a .txt file and is in the same directory as your .py file. As we start working with files, your repos will have .txt files pre-loaded in them. As we progress, you may need to upload your own files.
 
+Note: If you are working through this on your own and don't have access to the temps.txt file, create one that looks like this:
+
+```txt
+
+
 To open and read the `temps.txt` file, be sure you have the correct assignment open and then enter the following into PyCharm:
 ```python
 with open('text_files/temps.txt') as file_object:    # opens the file and assigns it to file_object
