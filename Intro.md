@@ -1,16 +1,35 @@
 # Introduction to Python
 ## Hello world
-Use the command line for these.
 
-```
+We'll start our Python journey by having a message of your choice print to the screen. A popular phrase for 
+beginning programmers is "Hello world!" - but you can choose any phrase you wish.
+
+In order to display characters on the screen (letters, words, numbers, etc), we need to use the `print()` function. 
+Note that there is no space between the keyword `print` and the parentheses. The information that goes inside the 
+parentheses 
+is called the argument. In this case, the argument will be the phrase that we want to print, surrounded by quotation 
+marks.
+
+In the window below, we'll see the phrase "Hello world!" printed to the screen. On the next line, type the print 
+statement again, using single quotes (' ') to surround the phrase. Press Enter/Return on your keyboard to execute 
+your new print statement.
+
+
+Example:
+```python
 >>> print("Hello world!")
 Hello world!
 >>> print('Hello world!')
 Hello world!
 ```
-* Hello world is called a string and needs quotes - single or double.
+
+<iframe src="https://trinket.io/embed/python/8afb24538f?runOption=console" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+**Important Notes:**
+* Hello world is called a string and needs quotes - single `' '` or double `" "`.
 * print() is a pre-defined Python function that displays arguments on the screen.
-* Whitespace doesn't matter except indentations. Single spaces between operators is convention.
+* Whitespace doesn't matter in Python, except indentations. Single spaces between operators is convention. (See 
+  below - and feel free to try it in the console above!.)
 
 ```
 >>> 2 + 2
